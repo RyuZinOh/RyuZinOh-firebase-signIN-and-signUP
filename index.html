@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Firebase Auth</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sign Up Form -->
+    <form id="signUpForm" class="auth-form">
+      <h2>Sign Up</h2>
+      <div id="signUpError" class="error"></div>
+      <input type="email" id="signUpEmail" placeholder="Email" required autocomplete="email">
+      <input type="password" id="signUpPassword" placeholder="Password" required autocomplete="new-password">
+      <button type="submit">Sign Up</button>
+      <p>Already have an account? <a href="#" id="switchToSignIn">Sign In</a></p>
+    </form>
+
+    <!-- Sign In Form -->
+    <form id="signInForm" class="auth-form" style="display: none;">
+      <h2>Sign In</h2>
+      <div id="signInError" class="error"></div>
+      <input type="email" id="signInEmail" placeholder="Email" required autocomplete="email">
+      <input type="password" id="signInPassword" placeholder="Password" required autocomplete="current-password">
+      <button type="submit">Sign In</button>
+      <p>Don't have an account? <a href="#" id="switchToSignUp">Sign Up</a></p>
+    </form>
+  </div>
+  <script type="module" src="js/firebase-config.js"></script>
+  <script type="module" src="js/auth.js"></script>
+  
+</body>
+</html>
